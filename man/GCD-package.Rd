@@ -1,0 +1,47 @@
+\name{GCD-package}
+\alias{GCD-package}
+\alias{GCD}
+\docType{package}
+\title{
+GCD: Global Charcoal Database data 
+}
+\description{
+The GCD package provides Global Charcoal Database data updated at regular intervals to be used in cunjuction with the paleofire package.
+}
+\details{
+\tabular{ll}{
+Package: \tab GCD\cr
+Type: \tab Package\cr
+Version: \tab 3.0\cr
+Date: \tab 2013-10-20\cr
+License: \tab GPL (>=2)\cr
+}
+}
+\section{Author(s)}{Global Paleofire Working Group <paleofire@gmail.com>}
+\section{Maintainer}{Olivier Blarquez <blarquez@gmail.com>}
+
+\references{
+Power, M., J. Marlon, P. Bartlein, and S. Harrison. 2010. Fire history and the Global Charcoal Database: a new tool for hypothesis testing and data exploration. Palaeogeography, Palaeoclimatology, Palaeoecology 291:52-59.
+}
+
+\keyword{ fire, global, charcoal, sediments, paleo}
+\seealso{
+\url{http://gpwg.org}
+}
+\examples{
+rm(list=ls())
+
+library(GCD)
+
+## Charcoal data:
+
+data(paleofiredata)
+head(paleofiredata)
+
+
+## Associated sites informations:
+
+data(paleofiresites)
+head(paleofiresites)
+
+}
