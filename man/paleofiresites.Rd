@@ -2,15 +2,16 @@
 \alias{paleofiresites}
 \docType{data}
 \title{
-GCD sites metadata}
+GCD sites information
+}
 \description{
-GCD sites metadata}
+Sites description and features}
 \usage{data(paleofiresites)}
 \format{
   A data frame with 736 observations on the following 23 variables.
   \describe{
     \item{\code{ID_SITE}}{a numeric vector}
-    \item{\code{SITE_NAME}}{sites names}
+    \item{\code{SITE_NAME}}{Sites names}
     \item{\code{LATITUDE}}{a numeric vector}
     \item{\code{LONGITUDE}}{a numeric vector}
     \item{\code{ELEV}}{a numeric vector}
@@ -19,7 +20,7 @@ GCD sites metadata}
     \item{\code{ID_REGION}}{a factor with levels \code{AFRI} \code{ASIA} \code{AUST} \code{CENA} \code{ENA0} \code{EURO} \code{RUSS} \code{SSA0} \code{TROP} \code{TSA0} \code{WNA0}}
     \item{\code{ID_COUNTRY}}{a factor with levels \code{ALGE} \code{ARGE} \code{AUST} \code{BOLI} \code{BRAZ} \code{BULG} \code{BURU} \code{CANA} \code{CHIL} \code{CHIN} \code{COLO} \code{COST} \code{CROA} \code{DENM} \code{DOMR} \code{ECUA} \code{EL S} \code{ETHI} \code{FIJI} \code{FINL} \code{FRAN} \code{GEOR} \code{GERM} \code{HAIT} \code{HOND} \code{HUNG} \code{INDI} \code{INDO} \code{ITAL} \code{JAPA} \code{JORD} \code{KENY} \code{KYRG} \code{MADA} \code{MEXI} \code{MONG} \code{NEWC} \code{NEWZ} \code{NICA} \code{NIGE} \code{NORW} \code{OCEA} \code{PALA} \code{PANA} \code{PAPU} \code{PERU} \code{RUSS} \code{SLOV} \code{SLVE} \code{SOAF} \code{SOLO} \code{SPAI} \code{SWED} \code{SWIT} \code{SYRI} \code{TANZ} \code{THAI} \code{TRKY} \code{UGAN} \code{UK00} \code{UKRA} \code{US00} \code{VANU}}
     \item{\code{ID_SITE_TYPE}}{a factor with levels \code{CEST} \code{COAS} \code{CSLT} \code{FLUV} \code{HOLL} \code{LACU} \code{LCIR} \code{LDRA} \code{LEXP} \code{LFLU} \code{LGLA} \code{LGMC} \code{LKET} \code{LMOR} \code{LNAT} \code{LPLY} \code{LSAL} \code{LTEC} \code{LTEK} \code{LTHK} \code{LVOL} \code{MARI} \code{NOTK} \code{OTHE} \code{TBLA} \code{TBOG} \code{TDET} \code{TERR} \code{TFBU} \code{TFEN} \code{TFLO} \code{TFLP} \code{TGSW} \code{TLIT} \code{TLTP} \code{TLUS} \code{TMIR} \code{TMOR} \code{TMSH} \code{TMSP}}
-    \item{\code{WATER_DEPT}}{a numeric vector}
+    \item{\code{WATER_DEPTH}}{a numeric vector}
     \item{\code{ID_BASIN_SIZE}}{a factor with levels \code{LARG} \code{MED} \code{MEDI} \code{NOTA} \code{NOTK} \code{SMAL} \code{VEGL} \code{VELG} \code{vESM} \code{VESM}}
     \item{\code{ID_CATCH_SIZE}}{a factor with levels \code{LARG} \code{MED} \code{MEDI} \code{NOTA} \code{NOTK} \code{Smal} \code{SMAL}}
     \item{\code{ID_LANDS_DESC}}{a factor with levels \code{BARA} \code{COAS} \code{COPL} \code{DIUP} \code{DUNE} \code{HUDI} \code{ISUP} \code{LOPL} \code{LORI} \code{LRVA} \code{MARI} \code{MEAD} \code{MOUN} \code{NOTK} \code{OTHE} \code{ROUP} \code{UPPL}}
@@ -30,49 +31,47 @@ GCD sites metadata}
     \item{\code{AGE_MODEL}}{a factor with levels \code{AUTH} \code{DCAL} \code{DIGI} \code{LINE} \code{NOMO} \code{NOTK} \code{OTHE} \code{POLY} \code{SMSP}}
     \item{\code{DATA_SOURCE}}{a factor with levels \code{AUTH} \code{DIGI} \code{NOTK} \code{RAW0}}
     \item{\code{QTYPE}}{a factor with levels \code{C0P0} \code{CONC} \code{INFL} \code{OTHE} \code{SOIL}}
-    \item{\code{RF99}}{Potential Natural Vegetation following Ramankutty and Foley (1999), see details}
-    \item{\code{L12}}{Potential Natural Vegetation following Levavasseur et al. (2012), see details}
+    \item{\code{L12}}{a numeric vector}
+    \item{\code{RF99}}{a numeric vector}
   }
 }
 \details{
-\describe{L12 levels}{\cr
-1: Boreal forest\cr
-2: Desert vegetation\cr
-3: Grassland and dry shrubland\cr
-4: Savannas abd dry woodlands\cr
-5: Temperate forest\cr
-6: Tropical forest\cr
-7: Tundra\cr
-8: Warm temperate\cr
-9: Warm desert\cr
-10: Cold desert\cr
-}
-\describe{RF99 levels}{\cr
-1: Tropical Evergreen Forest/Woodland\cr
-2: Tropical Deciduous Forest/Woodland\cr
-3: Temperate Broadleaf Evergreen Forest/Woodland\cr
-4: Temperate Needleleaf Evergreen Forest/Woodland\cr
-5: Temperate Deciduous Forest/Woodland\cr
-6: Boreal Evergreen Forest/Woodland\cr
-7: Boreal Deciduous Forest/Woodland\cr
-8: Evergreen/Deciduous Mixed Forest/Woodland\cr
-9: Savanna\cr
-10:	Grassland/Steppe\cr
-11:	Dense Shrubland\cr
-12:	Open Shrubland\cr
-13:	Tundra\cr
-14:	Desert\cr
-15:	Polar Desert/Rock/Ice\cr
-}
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+  \describe{L12 levels}{
+                        \code{1= Boreal forest}
+                        \code{2= Desert vegetation}
+                       \code{3= Grassland and dry shrubland}
+                        \code{4= Savannas abd dry woodlands}
+                        \code{5= Temperate forest}
+                        \code{6= Tropical forest}
+                       \code{7= Tundra}
+                       \code{8= Warm temperate}
+                       \code{9= Warm desert}
+                       \code{10= Cold desert}
+  }
+  \describe{RF99 levels}{
+                     \code{1= Tropical Evergreen Forest/Woodland}
+                      \code{2= Tropical Deciduous Forest/Woodland}
+                      \code{3= Temperate Broadleaf Evergreen Forest/Woodland}
+                      \code{4= Temperate Needleleaf Evergreen Forest/Woodland}
+                      \code{5= Temperate Deciduous Forest/Woodland}
+                      \code{6= Boreal Evergreen Forest/Woodland}
+                     \code{7= Boreal Deciduous Forest/Woodland}
+                     \code{8= Evergreen/Deciduous Mixed Forest/Woodland}
+                    \code{9= Savanna}
+                     \code{10=  Grassland/Steppe}
+                     \code{11=  Dense Shrubland}
+                      \code{12=	Open Shrubland}
+                       \code{13=	Tundra}
+                        \code{14=	Desert}
+                         \code{15=	Polar Desert/Rock/Ice}
+  }
 }
 \references{
 Ramankutty, N., and J.A. Foley (1999). Estimating historical changes in global land cover: croplands from 1700 to 1992, Global Biogeochemical Cycles 13(4), 997-1027.\cr
-Levavasseur, G., M. Vrac, D. M. Roche, and D. Paillard. 2012. Statistical modelling of a new global potential vegetation distribution. Environmental Research Letters 7:044019.
-  }
+  Levavasseur, G., M. Vrac, D. M. Roche, and D. Paillard. 2012. Statistical modelling of a new global potential vegetation distribution. Environmental Research Letters 7:044019.
+}
 \examples{
 data(paleofiresites)
+## maybe str(paleofiresites) ; plot(paleofiresites) ...
 }
 \keyword{datasets}
