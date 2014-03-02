@@ -1,9 +1,4 @@
-potveg=function(ID,classif="RF99"){
-  
-  require(paleofire)
-  require(ggplot2)
-  require(sp)
-  require(raster)
+potveg=function(ID,classif="RF99",buffer=NULL){
   
   if(classif=="RF99") {
     data(PNV_RF99);r=PNV_RF99
@@ -37,8 +32,29 @@ potveg=function(ID,classif="RF99"){
   # Convert data to spatial points data frame using sp
   coordinates(data) <- c("x","y")
   
-  # Find potveg umber at data location
-  loc=extract(r, data)
+  
+  
+  ## OR within a buffer using density
+  if(is.null(buffer)==FALSE){
+    buff=extract(r, data, buffer=buffer)
+    
+    buffer_dens=function(x){
+      if(sum(x,na.rm=TRUE)!=0){
+      dens=density(x,na.rm=TRUE,n=25,bw=2)
+      #plot(density(x,na.rm=TRUE))
+      pv=round(dens$x[which(dens$y==max(dens$y))])
+      } else pv=NA
+      return(pv)
+    }
+    
+    loc=lapply(buff,buffer_dens)
+    
+    loc=unlist(loc)} else
+      
+      # Find potveg number at EXACT data location
+      loc=extract(r, data)
+  ## Done
+  
   data=data.frame(x,y,loc=loc)
   data=na.omit(data)
   
@@ -51,7 +67,7 @@ potveg=function(ID,classif="RF99"){
   for (i in 1:length(vnames))
     n[i]=sum(m[data[,3]==i])
   
-  vnames=paste(vnames,", n=",n,sep="")
+  vnames=paste(1:length(vnames),": ",vnames,", n=",n,sep="")
   
   ## Replace values
   
@@ -63,34 +79,34 @@ potveg=function(ID,classif="RF99"){
   map1[,4]=as.factor(map1[,4])
   data[,4]=ordered(data[,4],levels=vnames)
   map1[,4]=ordered(map1[,4],levels=vnames)
-  colnames(data)=c("x","y","id","name")
-  colnames(map1)=c("x","y","id","name")
+  
+  colnames(data)=c("x","y","veg_id","name")
+  colnames(map1)=c("x","y","veg_id","name")
+  
+  ## Sites ids
+  data=cbind(SitesIDS=ID$SitesIDS,data)
+  
   out=list(site_data=data,map=map1)
+  class(out)="potveg"
   return(out)
 }
 
-plot.potveg=function(x,...){
-  if(classif=="RF99") {
-    pal=c("#A6CEE3" , "#1F78B4" , "#B2DF8A" , "#33A02C" , "#435c0a",
-          "#FB9A99" , "#E31A1C" , "#FDBF6F" ,"#8fa460", "#FF7F00" ,"#6060d4", "#CAB2D6" , "#6A3D9A" , "#FFFF99" , "#B15928")
-  } else {pal=c("#A6CEE3" , "#1F78B4" , "#B2DF8A" , "#33A02C" , "#435c0a",
-                "#FB9A99" , "#E31A1C" , "#FDBF6F" ,"#8fa460", "#FF7F00")}
+plot.potveg=function(x,size=4,palette=NULL,alpha=0.5,text=FALSE,...){
   
-  # source("/Users/Olivier/Documents/biome_CHAR/scalebar.R")
-  # # To use for fills, add
-  # pdf(file="/Users/Olivier/Desktop/map.pdf",width=12,height=7)
-  p=ggplot(map1)+geom_raster(data=map1,aes(X,Y,fill=VEG) )+
-    scale_fill_manual(name="Potential vegetation",values=pal,labels =vnames)+
-    geom_point(data=data,aes(x,y),alpha=0.7,size=3)+xlab("Longitude")+ylab("Latitude")+
+  if(is.null(palette))
+    pal=c("#8dd3c7","#ffffb3","#bebada","#fb8072",
+          "#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd",
+          "#ccebc5","#ffed6f") else pal=palette
+  
+  pal=colorRampPalette(pal)(length(unique(x$map$name))) 
+  
+  p=ggplot(x$map)+geom_raster(data=x$map,aes(x,y,fill=name) )+
+    scale_fill_manual(name="Potential vegetation",values=pal,labels =levels(x$map$name))+
+    xlab("Longitude")+ylab("Latitude")+
     theme_bw(base_size=18)
+  if(text==TRUE){p=p+geom_text(data=x$site_data,aes(x,y,label=id),alpha=alpha,size=size)
+  } else p=p+ geom_point(data=x$site_data,aes(x,y),alpha=alpha,size=size)
   p
   return(p)
   
 }
-
-
-
-
-
-
-
