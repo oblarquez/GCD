@@ -5,19 +5,19 @@ potveg=function(ID,classif="RF99",buffer=NULL){
   } else {data(PNV_L12);r=PNV_L12}
   
   if(classif=="RF99") {
-    vnames=c("Tropical Evergreen Forest/Woodland",
-             "Tropical Deciduous Forest/Woodland",
-             "Temperate Broadleaf Evergreen Forest/Woodland",
-             "Temperate Needleleaf Evergreen Forest/Woodland",
-             "Temperate Deciduous Forest/Woodland",
-             "Boreal Evergreen Forest/Woodland",
-             "Boreal Deciduous Forest/Woodland",
-             "Evergreen/Deciduous Mixed Forest/Woodland",
-             "Savanna","Grassland/Steppe",
-             "Dense Shrubland",
-             "Open Shrubland","Tundra","Desert","Polar Desert/Rock/Ice")
-  } else vnames=c("Boreal forest","Desert vegetation","Grassland and dry shrubland","Savannas abd dry woodlands",
-                  "Temperate forest" ,"Tropical forest", "Tundra", "Warm temperate","Warm desert","Cold desert")
+    vnames=c("1: Tropical Evergreen Forest/Woodland",
+             "2: Tropical Deciduous Forest/Woodland",
+             "3: Temperate Broadleaf Evergreen Forest/Woodland",
+             "4: Temperate Needleleaf Evergreen Forest/Woodland",
+             "5: Temperate Deciduous Forest/Woodland",
+             "6: Boreal Evergreen Forest/Woodland",
+             "7: Boreal Deciduous Forest/Woodland",
+             "8: Evergreen/Deciduous Mixed Forest/Woodland",
+             "9: Savanna","Grassland/Steppe",
+             "10: Dense Shrubland",
+             "11: Open Shrubland","12: Tundra","13: Desert","14: Polar Desert/Rock/Ice")
+  } else vnames=c("1: Boreal forest","2: Desert vegetation","3: Grassland and dry shrubland","4: Savannas abd dry woodlands",
+                  "%: Temperate forest" ,"6: Tropical forest", "7: Tundra", "8: Warm temperate","9: Warm desert","10: Cold desert")
   
   # New site location 
   capture.output(
@@ -40,8 +40,8 @@ potveg=function(ID,classif="RF99",buffer=NULL){
     
     buffer_dens=function(x){
       if(sum(x,na.rm=TRUE)!=0){
-      dens=density(x,na.rm=TRUE,n=25,bw=2)
-      #plot(density(x,na.rm=TRUE))
+      dens=density(x,na.rm=TRUE,n=25)
+      #plot(density(x,na.rm=TRUE,n=20))
       pv=round(dens$x[which(dens$y==max(dens$y))])
       } else pv=NA
       return(pv)
@@ -56,7 +56,8 @@ potveg=function(ID,classif="RF99",buffer=NULL){
   ## Done
   
   data=data.frame(x,y,loc=loc)
-  data=na.omit(data)
+  sitid=ID$SitesIDS[is.na(data[,3])==FALSE]
+  data=data[is.na(data[,3])==FALSE,]
   
   map1=data.frame(rasterToPoints(r))
   colnames(map1)=c("X","Y","VEG")
@@ -67,7 +68,7 @@ potveg=function(ID,classif="RF99",buffer=NULL){
   for (i in 1:length(vnames))
     n[i]=sum(m[data[,3]==i])
   
-  vnames=paste(1:length(vnames),": ",vnames,", n=",n,sep="")
+  vnames=paste(vnames,", n=",n,sep="")
   
   ## Replace values
   
@@ -84,7 +85,7 @@ potveg=function(ID,classif="RF99",buffer=NULL){
   colnames(map1)=c("x","y","veg_id","name")
   
   ## Sites ids
-  data=cbind(SitesIDS=ID$SitesIDS,data)
+  data=cbind(SitesIDS=sitid,data)
   
   out=list(site_data=data,map=map1)
   class(out)="potveg"
@@ -104,7 +105,7 @@ plot.potveg=function(x,size=4,palette=NULL,alpha=0.5,text=FALSE,...){
     scale_fill_manual(name="Potential vegetation",values=pal,labels =levels(x$map$name))+
     xlab("Longitude")+ylab("Latitude")+
     theme_bw(base_size=18)
-  if(text==TRUE){p=p+geom_text(data=x$site_data,aes(x,y,label=id),alpha=alpha,size=size)
+  if(text==TRUE){p=p+geom_text(data=x$site_data,aes(x,y,label=veg_id),alpha=alpha,size=size)
   } else p=p+ geom_point(data=x$site_data,aes(x,y),alpha=alpha,size=size)
   p
   return(p)
