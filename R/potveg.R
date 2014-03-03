@@ -13,11 +13,11 @@ potveg=function(ID,classif="RF99",buffer=NULL){
              "6: Boreal Evergreen Forest/Woodland",
              "7: Boreal Deciduous Forest/Woodland",
              "8: Evergreen/Deciduous Mixed Forest/Woodland",
-             "9: Savanna","Grassland/Steppe",
-             "10: Dense Shrubland",
-             "11: Open Shrubland","12: Tundra","13: Desert","14: Polar Desert/Rock/Ice")
+             "9: Savanna","10: Grassland/Steppe",
+             "11: Dense Shrubland",
+             "12: Open Shrubland","13: Tundra","14: Desert","15: Polar Desert/Rock/Ice")
   } else vnames=c("1: Boreal forest","2: Desert vegetation","3: Grassland and dry shrubland","4: Savannas abd dry woodlands",
-                  "%: Temperate forest" ,"6: Tropical forest", "7: Tundra", "8: Warm temperate","9: Warm desert","10: Cold desert")
+                  "5: Temperate forest" ,"6: Tropical forest", "7: Tundra", "8: Warm temperate","9: Warm desert","10: Cold desert")
   
   # New site location 
   capture.output(
@@ -102,7 +102,7 @@ plot.potveg=function(x,size=4,palette=NULL,alpha=0.5,text=FALSE,...){
   pal=colorRampPalette(pal)(length(unique(x$map$name))) 
   
   p=ggplot(x$map)+geom_raster(data=x$map,aes(x,y,fill=name) )+
-    scale_fill_manual(name="Potential vegetation",values=pal,labels =levels(x$map$name))+
+    scale_fill_manual(name="Potential vegetation",values=pal)+
     xlab("Longitude")+ylab("Latitude")+
     theme_bw(base_size=18)
   if(text==TRUE){p=p+geom_text(data=x$site_data,aes(x,y,label=veg_id),alpha=alpha,size=size)
