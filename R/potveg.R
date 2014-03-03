@@ -26,9 +26,7 @@ potveg=function(ID,classif="RF99",buffer=NULL){
     file='NUL')
   data<-data.frame(x,y)
   
-  e=extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10)
-  
-  r=crop(r,e)
+  r=crop(r,extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
   
   # points(x,y)
   # Convert data to spatial points data frame using sp
