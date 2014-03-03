@@ -8,6 +8,6 @@ Maintainer: Olivier Blarquez <blarquez@gmail.com>
 Description: Global Charcoal database data and tools
 URL: http://gpwg.org
 License:  GPL (>= 2)
-Depends: R(>= 2.10.0)
-Imports: paleofire, sp, raster, ggplot2
+Depends: R(>= 2.10.0), ggplot2
+Imports: paleofire, sp, raster
 LazyLoad: yes
