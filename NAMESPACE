@@ -1,2 +1,2 @@
 exportPattern("^[[:alpha:]]+")
-import(paleofire, sp, raster, ggplot2)
+import(sp, raster, ggplot2)
