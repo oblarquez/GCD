@@ -1,2 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 import(sp, raster, ggplot2)
+importFrom("raster")
+
+S3method(plot,potveg)

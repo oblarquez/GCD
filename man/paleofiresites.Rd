@@ -37,37 +37,37 @@ Sites description and features}
 }
 \details{
   \describe{L12 levels}{
-                        \code{1= Boreal forest}
-                        \code{2= Desert vegetation}
-                       \code{3= Grassland and dry shrubland}
-                        \code{4= Savannas abd dry woodlands}
-                        \code{5= Temperate forest}
-                        \code{6= Tropical forest}
-                       \code{7= Tundra}
-                       \code{8= Warm temperate}
-                       \code{9= Warm desert}
-                       \code{10= Cold desert}
+                        \code{1= Boreal forest} \cr
+                        \code{2= Desert vegetation} \cr
+                       \code{3= Grassland and dry shrubland} \cr
+                        \code{4= Savannas abd dry woodlands} \cr
+                        \code{5= Temperate forest}\cr
+                        \code{6= Tropical forest}\cr
+                       \code{7= Tundra}\cr
+                       \code{8= Warm temperate}\cr
+                       \code{9= Warm desert}\cr
+                       \code{10= Cold desert}\cr
   }
   \describe{RF99 levels}{
-                     \code{1= Tropical Evergreen Forest/Woodland}
-                      \code{2= Tropical Deciduous Forest/Woodland}
-                      \code{3= Temperate Broadleaf Evergreen Forest/Woodland}
-                      \code{4= Temperate Needleleaf Evergreen Forest/Woodland}
-                      \code{5= Temperate Deciduous Forest/Woodland}
-                      \code{6= Boreal Evergreen Forest/Woodland}
-                     \code{7= Boreal Deciduous Forest/Woodland}
-                     \code{8= Evergreen/Deciduous Mixed Forest/Woodland}
-                    \code{9= Savanna}
-                     \code{10=  Grassland/Steppe}
-                     \code{11=  Dense Shrubland}
-                      \code{12=	Open Shrubland}
-                       \code{13=	Tundra}
-                        \code{14=	Desert}
-                         \code{15=	Polar Desert/Rock/Ice}
+                     \code{1= Tropical Evergreen Forest/Woodland}\cr
+                      \code{2= Tropical Deciduous Forest/Woodland}\cr
+                      \code{3= Temperate Broadleaf Evergreen Forest/Woodland}\cr
+                      \code{4= Temperate Needleleaf Evergreen Forest/Woodland}\cr
+                      \code{5= Temperate Deciduous Forest/Woodland}\cr
+                      \code{6= Boreal Evergreen Forest/Woodland}\cr
+                     \code{7= Boreal Deciduous Forest/Woodland}\cr
+                     \code{8= Evergreen/Deciduous Mixed Forest/Woodland}\cr
+                    \code{9= Savanna}\cr
+                     \code{10= Grassland/Steppe}\cr
+                     \code{11= Dense Shrubland}\cr
+                      \code{12=	Open Shrubland}\cr
+                       \code{13= Tundra}\cr
+                        \code{14=	Desert}\cr
+                         \code{15= Polar Desert/Rock/Ice}\cr
   }
 }
 \references{
-Ramankutty, N., and J.A. Foley (1999). Estimating historical changes in global land cover: croplands from 1700 to 1992, Global Biogeochemical Cycles 13(4), 997-1027.\cr
+Ramankutty, N., and J.A. Foley (1999). Estimating historical changes in global land cover: croplands from 1700 to 1992, Global Biogeochemical Cycles 13(4), 997-1027.\cr \cr
   Levavasseur, G., M. Vrac, D. M. Roche, and D. Paillard. 2012. Statistical modelling of a new global potential vegetation distribution. Environmental Research Letters 7:044019.
 }
 \examples{
