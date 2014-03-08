@@ -12,8 +12,8 @@ The GCD package provides Global Charcoal Database data updated at regular interv
 \tabular{ll}{
 Package: \tab GCD\cr
 Type: \tab Package\cr
-Version: \tab 3.0\cr
-Date: \tab 2013-10-20\cr
+Version: \tab 3.0.1\cr
+Date: \tab 2014-03-08\cr
 License: \tab GPL (>=2)\cr
 }
 }
