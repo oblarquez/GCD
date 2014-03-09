@@ -58,7 +58,7 @@ potveg=function(ID,classif="RF99",buffer=NULL){
     
     loc=unlist(loc)} else loc=extract(r, data)
       
-      # Find potveg number at EXACT data location
+  # Find potveg number at EXACT data location
       
   ## Done
   
