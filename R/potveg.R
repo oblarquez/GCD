@@ -1,4 +1,4 @@
-potveg=function(ID,classif="RF99",buffer=NULL){
+potveg=function(ID,classif="rf99",buffer=NULL){
   
   
   paleofiresites=NULL
@@ -9,19 +9,19 @@ potveg=function(ID,classif="RF99",buffer=NULL){
   data<-data.frame(x,y)
   
   
-  if(classif=="RF99") {
+  if(classif=="rf99") {
     PNV_RF99=NULL
     data(PNV_RF99,envir = environment())
     r=raster::crop(PNV_RF99,extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
     
   } 
-  if(classif=="L12"){
+  if(classif=="l12"){
     PNV_L12=NULL
     data(PNV_L12,envir = environment())
     r=raster::crop(PNV_L12,extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
   }
   
-  if(classif=="RF99") {
+  if(classif=="rf99") {
     vnames=c("1: Tropical Evergreen Forest/Woodland",
              "2: Tropical Deciduous Forest/Woodland",
              "3: Temperate Broadleaf Evergreen Forest/Woodland",

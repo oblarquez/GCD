@@ -6,7 +6,7 @@ potveg}
 \description{
 Retrieve potential vegetation types based on charcoal sites location}
 \usage{
-potveg(ID, classif = "RF99", buffer = NULL)
+potveg(ID, classif = "rf99", buffer = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -14,7 +14,7 @@ potveg(ID, classif = "RF99", buffer = NULL)
 An object of the class "pfSiteSel"
 }
   \item{classif}{
-Potential vegetation to be used: "RF99" in reference to Ramankutty and Foley (1999) or "L12" in reference to Levavasseur et al. 2012.
+Potential vegetation to be used: "rf99" in reference to Ramankutty and Foley (1999) or "l12" in reference to Levavasseur et al. 2012.
 }
   \item{buffer}{
 Distance in m that defines a radius around each site to calculate the dominant vegetation type by kernel density estimation.
@@ -42,7 +42,7 @@ O. Blarquez}
 # not run
 # require(paleofire)
 # ID=pfSiteSel(c(1:10))
-# obj=potveg(ID,classif="L12")
+# obj=potveg(ID,classif="l12")
 # head(obj$site_data)
 
 }

@@ -44,7 +44,7 @@ O. Blarquez}
 # #not run
 # require(paleofire)
 # ID=pfSiteSel(c(1:10))
-# obj=potveg(ID,classif="L12")
+# obj=potveg(ID,classif="l12")
 # plot(obj)
 # 
 # #Return a ggplot object 
