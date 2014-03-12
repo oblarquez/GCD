@@ -1,0 +1,23 @@
+
+GCD 3.0.1
+-----------------------------------------
+
+New features:
+
+* Added UNIT METHOD and TYPE in paleofiredata to work in conjunction with pfTransform (paleofire package 1.1)
+
+* Added potveg to retrieve the potential vegetation associated with charcoal sites (and plot capabilities)
+
+* paleofiresites has been updated to work in conjunction with pfSiteSel (paleofire package 1.1)
+
+Fixes:
+
+* All data from the GCD is now included (multiple units may exist for single sites)
+
+* Three decimal unit precision for all charcoal values
+
+
+GCD 3.0
+-----------------------------------------
+
+* Initial release of the package
