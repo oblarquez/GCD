@@ -4,8 +4,8 @@ potveg=function(ID,classif="rf99",buffer=NULL){
   paleofiresites=NULL
   # New site location 
   data(paleofiresites,envir = environment())
-  x=paleofiresites[paleofiresites$id_site %in% ID$SitesIDS,]$long
-  y=paleofiresites[paleofiresites$id_site %in% ID$SitesIDS,]$lat
+  x=paleofiresites[paleofiresites$id_site %in% ID$id_site,]$long
+  y=paleofiresites[paleofiresites$id_site %in% ID$id_site,]$lat
   data<-data.frame(x,y)
   
   
