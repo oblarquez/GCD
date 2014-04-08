@@ -12,13 +12,13 @@ potveg=function(ID,classif="rf99",buffer=NULL){
   if(classif=="rf99") {
     PNV_RF99=NULL
     data(PNV_RF99,envir = environment())
-    r=raster::crop(PNV_RF99,extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
+    r=raster::crop(PNV_RF99,raster::extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
     
   } 
   if(classif=="l12"){
     PNV_L12=NULL
     data(PNV_L12,envir = environment())
-    r=raster::crop(PNV_L12,extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
+    r=raster::crop(PNV_L12,raster::extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
   }
   
   if(classif=="rf99") {
@@ -63,7 +63,7 @@ potveg=function(ID,classif="rf99",buffer=NULL){
   ## Done
   
   data=data.frame(x,y,loc=loc)
-  sitid=ID$SitesIDS[is.na(data[,3])==FALSE]
+  sitid=ID$id_site[is.na(data[,3])==FALSE]
   data=data[is.na(data[,3])==FALSE,]
   
   map1=data.frame(rasterToPoints(r))
