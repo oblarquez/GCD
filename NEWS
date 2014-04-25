@@ -1,4 +1,9 @@
 
+GCD 3.0.2 (08/04/14)
+-----------------------------------------
+
+Bug fix that caused potveg to fail (related to old variable naming scheme)
+
 GCD 3.0.1
 -----------------------------------------
 
