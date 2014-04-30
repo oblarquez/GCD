@@ -1,8 +1,12 @@
+GCD 3.0.3 (29/04/14)
+-----------------------------------------
+
+*Bug fix in potveg function related to projections not considered as longlat by default for the extract function (raster package). 
 
 GCD 3.0.2 (08/04/14)
 -----------------------------------------
 
-Bug fix that caused potveg to fail (related to old variable naming scheme)
+*Bug fix that caused potveg to fail (related to old variable naming scheme)
 
 GCD 3.0.1
 -----------------------------------------

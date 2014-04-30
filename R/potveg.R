@@ -33,23 +33,30 @@ potveg=function(ID,classif="rf99",buffer=NULL){
              "9: Savanna","10: Grassland/Steppe",
              "11: Dense Shrubland",
              "12: Open Shrubland","13: Tundra","14: Desert","15: Polar Desert/Rock/Ice")
-  } else vnames=c("1: Boreal forest","2: Desert vegetation","3: Grassland and dry shrubland","4: Savannas abd dry woodlands",
+  } else vnames=c("1: Boreal forest","2: Desert vegetation","3: Grassland and dry shrubland","4: Savannas and dry woodlands",
                   "5: Temperate forest" ,"6: Tropical forest", "7: Tundra", "8: Warm temperate","9: Warm desert","10: Cold desert")
     
   # points(x,y)
   # Convert data to spatial points data frame using sp
-  coordinates(data) <- c("x","y")
   
+  data=SpatialPoints(data, proj4string=CRS("+proj=longlat +datum=WGS84"))
+  raster::projection(r) <- "+proj=longlat +datum=WGS84"
   
-  ## OR within a buffer using density
+  # Find potveg number at EXACT data location
+  # OR within a buffer using kernel density estimation
+  
   if(is.null(buffer)==FALSE){
-    buff=extract(r, data, buffer=buffer)
-    
+      
+   buff=raster::extract(r, data, buffer=buffer)
+   
     buffer_dens=function(x){
       if(sum(x,na.rm=TRUE)!=0){
-        dens=density(x,na.rm=TRUE,n=25)
-        #plot(density(x,na.rm=TRUE,n=20))
+        x=na.omit(x)
+        if(length(unique(x))>1){
+        dens=density(x,na.rm=TRUE,bw = "nrd0", kernel ="gaussian")
+        #plot(density(x,na.rm=TRUE,bw = "nrd0", kernel ="gaussian"))
         pv=round(dens$x[which(dens$y==max(dens$y))])
+        } else pv=unique(x)
       } else pv=NA
       return(pv)
     }
@@ -57,9 +64,7 @@ potveg=function(ID,classif="rf99",buffer=NULL){
     loc=lapply(buff,buffer_dens)
     
     loc=unlist(loc)} else loc=extract(r, data)
-      
-  # Find potveg number at EXACT data location
-      
+            
   ## Done
   
   data=data.frame(x,y,loc=loc)
@@ -92,7 +97,7 @@ potveg=function(ID,classif="rf99",buffer=NULL){
   colnames(map1)=c("x","y","veg_id","name")
   
   ## Sites ids
-  data=cbind(SitesIDS=sitid,data)
+  data=cbind(id_site=sitid,data)
   
   out=list(site_data=data,map=map1)
   class(out)="potveg"
