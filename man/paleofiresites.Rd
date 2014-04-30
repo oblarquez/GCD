@@ -39,7 +39,7 @@ Sites description and features}
   }
 }
 \details{
-  \describe{l12 levels}{
+  \describe{l12 levels}{\code{0= Water} \cr
                         \code{1= Boreal forest} \cr
                         \code{2= Desert vegetation} \cr
                        \code{3= Grassland and dry shrubland} \cr
@@ -52,6 +52,7 @@ Sites description and features}
                        \code{10= Cold desert}\cr
   }
   \describe{rf99 levels}{
+                      \code{0= Water} \cr
                      \code{1= Tropical Evergreen Forest/Woodland}\cr
                       \code{2= Tropical Deciduous Forest/Woodland}\cr
                       \code{3= Temperate Broadleaf Evergreen Forest/Woodland}\cr

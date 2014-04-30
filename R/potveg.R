@@ -13,7 +13,6 @@ potveg=function(ID,classif="rf99",buffer=NULL){
     PNV_RF99=NULL
     data(PNV_RF99,envir = environment())
     r=raster::crop(PNV_RF99,raster::extent(min(x)-10,max(x)+10,min(y)-10,max(y)+10))
-    
   } 
   if(classif=="l12"){
     PNV_L12=NULL
@@ -22,7 +21,8 @@ potveg=function(ID,classif="rf99",buffer=NULL){
   }
   
   if(classif=="rf99") {
-    vnames=c("1: Tropical Evergreen Forest/Woodland",
+    vnames=c("0: Water",
+             "1: Tropical Evergreen Forest/Woodland",
              "2: Tropical Deciduous Forest/Woodland",
              "3: Temperate Broadleaf Evergreen Forest/Woodland",
              "4: Temperate Needleleaf Evergreen Forest/Woodland",
@@ -33,9 +33,11 @@ potveg=function(ID,classif="rf99",buffer=NULL){
              "9: Savanna","10: Grassland/Steppe",
              "11: Dense Shrubland",
              "12: Open Shrubland","13: Tundra","14: Desert","15: Polar Desert/Rock/Ice")
-  } else vnames=c("1: Boreal forest","2: Desert vegetation","3: Grassland and dry shrubland","4: Savannas and dry woodlands",
-                  "5: Temperate forest" ,"6: Tropical forest", "7: Tundra", "8: Warm temperate","9: Warm desert","10: Cold desert")
-    
+  } else vnames=c("0: Water","1: Boreal forest","2: Desert vegetation",
+                  "3: Grassland and dry shrubland","4: Savannas and dry woodlands",
+                  "5: Temperate forest" ,"6: Tropical forest", "7: Tundra", 
+                  "8: Warm temperate","9: Warm desert","10: Cold desert")
+  
   # points(x,y)
   # Convert data to spatial points data frame using sp
   
@@ -46,50 +48,70 @@ potveg=function(ID,classif="rf99",buffer=NULL){
   # OR within a buffer using kernel density estimation
   
   if(is.null(buffer)==FALSE){
-      
-   buff=raster::extract(r, data, buffer=buffer)
-   
+    
+    buff=raster::extract(r, data, buffer=buffer)
+    
     buffer_dens=function(x){
       if(sum(x,na.rm=TRUE)!=0){
         x=na.omit(x)
         if(length(unique(x))>1){
-        dens=density(x,na.rm=TRUE,bw = "nrd0", kernel ="gaussian")
-        #plot(density(x,na.rm=TRUE,bw = "nrd0", kernel ="gaussian"))
-        pv=round(dens$x[which(dens$y==max(dens$y))])
+          dens=density(x,na.rm=TRUE,bw = "nrd0", kernel ="gaussian")
+          #plot(density(x,na.rm=TRUE,bw = "nrd0", kernel ="gaussian"))
+          pv=round(dens$x[which(dens$y==max(dens$y))])
         } else pv=unique(x)
-      } else pv=NA
+      } else pv=0
       return(pv)
     }
     
     loc=lapply(buff,buffer_dens)
     
+    ## Sometimes within a certain radius there is two potential vegetations with exactly 
+    #  the same coverage we will use extract to find the potential vegetation at site
+    # location and the assign it to the site
+    
+    g=c()
+    for(i in 1:length(loc))
+      g[i]=length(loc[[i]])
+    where=which(g>1)
+    
+    if(length(where)>0)
+    for(i in 1:length(where)){
+      temp=raster::extract(r,data[where[i]])
+      if(is.na(temp)) temp=0
+      loc[[where[i]]]=temp
+    }
+    
+    ## Ok now
+    
     loc=unlist(loc)} else loc=extract(r, data)
-            
-  ## Done
+  
+  ## Done 
+  
   
   data=data.frame(x,y,loc=loc)
   sitid=ID$id_site[is.na(data[,3])==FALSE]
   data=data[is.na(data[,3])==FALSE,]
   
-  map1=data.frame(rasterToPoints(r))
+  r[is.na(r)]=0 ## Fix for water
+  map1=data.frame(raster::rasterToPoints(r))
   colnames(map1)=c("X","Y","VEG")
   
   ## Little trick for n
   m=rep(1,length(data[,1]))
   n=c()
   for (i in 1:length(vnames))
-    n[i]=sum(m[data[,3]==i])
+    n[i]=sum(m[data[,3]==i-1])
   
   vnames=paste(vnames,", n=",n,sep="")
   
   ## Replace values
-  
   for(i in 1:length(vnames)){
-    map1[map1[,3]==i,4]=vnames[i]
-    data[data[,3]==i,4]=vnames[i]
+    map1[map1[,3]==i-1,4]=vnames[i]
+    data[data[,3]==i-1,4]=vnames[i]
   }
   data[,4]=as.factor(data[,4])
   map1[,4]=as.factor(map1[,4])
+  
   data[,4]=ordered(data[,4],levels=vnames)
   map1[,4]=ordered(map1[,4],levels=vnames)
   
@@ -113,8 +135,10 @@ plot.potveg=function(x,size=4,palette=NULL,alpha=0.5,text=FALSE,...){
     pal=c("#8dd3c7","#ffffb3","#bebada","#fb8072",
           "#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd",
           "#ccebc5","#ffed6f") else pal=palette
-  
-  pal=colorRampPalette(pal)(length(unique(x$map$name))) 
+ 
+
+  pal=colorRampPalette(pal)(length(unique(x$map$name))-1) 
+  pal=c("#FFFFFF",pal) 
   
   p=ggplot(x$map)+geom_raster(data=x$map,aes(x,y,fill=name) )+
     scale_fill_manual(name="Potential vegetation",values=pal)+

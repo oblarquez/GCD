@@ -1,12 +1,16 @@
-GCD 3.0.3 (29/04/14)
+GCD 3.0.3 (30/04/14)
 -----------------------------------------
 
-*Bug fix in potveg function related to projections not considered as longlat by default for the extract function (raster package). 
+* The rf99 and l12 fields have been updated using the potveg function and kernel density estimation of the dominant potential vegetation in a radius of 30 km around sites
+
+* "0: Water" level has been added to potential vegetations
+
+* Bug fix in potveg function related to projections not considered as longlat by default for the extract function (raster package). 
 
 GCD 3.0.2 (08/04/14)
 -----------------------------------------
 
-*Bug fix that caused potveg to fail (related to old variable naming scheme)
+* Bug fix that caused potveg to fail (related to old variable naming scheme)
 
 GCD 3.0.1
 -----------------------------------------
