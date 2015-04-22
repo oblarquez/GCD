@@ -1,14 +1,19 @@
 Package: GCD
 Type: Package
 Title: Global Charcoal Database
-Version: 3.0.4
-Date: 2014-05-22
-Author: Global Paleofire Working Group <paleofire@gmail.com>
+Version: 3.0.5
+Date: 2015-04-22
+Author: Global Paleofire Working Group <paleofire@univ-fcomte.fr>
 Maintainer: Olivier Blarquez <blarquez@gmail.com>
-Description: Global Charcoal database data and tools
+Description: Contains the Global Charcoal database data. Data include charcoal
+    series (age, depth, charcoal quantity, associated units and methods) and
+    informations on sedimentary sites (localisation, depositionnal
+    environnement, biome, etc.).
 URL: http://gpwg.org
-License:  GPL (>= 2)
-Depends: R(>= 2.10.0)
-Suggests: paleofire
-Imports: sp, raster, ggplot2
+License: GPL (>= 2)
+Depends:
+    R(>= 2.10.0)
+Suggests:
+    paleofire
 LazyLoad: yes
+Encoding: UTF-8

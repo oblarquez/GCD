@@ -1,3 +1,12 @@
+
+GCD 3.0.5 (22/04/15)
+-----------------------------------------
+
+* Removed potveg function (now part of paleofire package)
+
+* Documentation moved to roxygen
+
+
 GCD 3.0.4 (22/05/14)
 -----------------------------------------
 
