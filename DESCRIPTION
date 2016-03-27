@@ -7,7 +7,8 @@ Author: Global Paleofire Working Group <paleofire@univ-fcomte.fr>
 Maintainer: Olivier Blarquez <blarquez@gmail.com>
 Description: Contains the Global Charcoal database data. Data include charcoal
     series (age, depth, charcoal quantity, associated units and methods) and
-    information on sedimentary sites (localisation, depositional environment, biome, etc.).
+    information on sedimentary sites (localisation, depositional environment, biome,
+    etc.).
 URL: http://gpwg.org
 License: GPL (>= 2)
 Depends:
@@ -16,3 +17,4 @@ Suggests:
     paleofire
 LazyLoad: yes
 Encoding: UTF-8
+RoxygenNote: 5.0.1
