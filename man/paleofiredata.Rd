@@ -4,23 +4,52 @@
 \name{paleofiredata}
 \alias{paleofiredata}
 \title{GCD Charcoal data}
-\format{A data frame with 134269 observations on the following 4 variables.
-\describe{ \item{ID_SITE}{a numeric vector} \item{DEPTH}{a
-numeric vector} \item{EST_AGE}{a numeric vector}
-\item{QUANTITY}{a numeric vector} \item{METHOD}{a factor
-with levels \code{ACID} \code{CPRO} \code{GRAV} \code{HNPK} \code{HVLQ}
-\code{IMAG} \code{NOTK} \code{OREC} \code{OTHE} \code{POLS} \code{SIEV} }
-\item{UNIT}{a factor see \code{\link{paleofiresites}} for details}
-\item{TYPE}{a factor with levels \code{C0P0} \code{CONC} \code{INFL}
-\code{NOTK} \code{OTHE} \code{SOIL}} }}
+\format{A data frame with 142507 observations on the following 8 variables.
+\describe{\item{ID_SITE}{a numeric vector} 
+\item{DEPTH}{a numeric vector} 
+\item{EST_AGE}{a numeric vector}
+\item{QUANTITY}{a numeric vector} 
+\item{UNIT}{a factor with
+levels \code{\%125} \code{\%DWT} \code{\%TOF} \code{\%WTO} \code{100P}
+\code{125V} \code{5015} \code{7PRA} \code{8POS} \code{ABSC} \code{ARCC}
+\code{AREA} \code{ARPG} \code{BCCT} \code{C010} \code{C01K} \code{C100}
+\code{C120} \code{C125} \code{C140} \code{C150} \code{C250} \code{C550}
+\code{CARE} \code{CCMY} \code{CG2M} \code{CHCO} \code{CHRX} \code{CM10}
+\code{CMGR} \code{CMML} \code{COML} \code{CP20} \code{CPAR} \code{CPRA}
+\code{DC13} \code{FRAG} \code{G05I} \code{G10I} \code{GCHG} \code{GCMY}
+\code{GRG1} \code{GRGR} \code{GRPC} \code{GT05} \code{GT10} \code{GT12}
+\code{GT15} \code{GT18} \code{GT24} \code{GT25} \code{GT2X} \code{GT30}
+\code{GT38} \code{GT50} \code{GT53} \code{GT5C} \code{GT5D} \code{LT12}
+\code{LT15} \code{LT18} \code{LT1M} \code{LT25} \code{LT40} \code{M2GR}
+\code{M2ML} \code{MCM3} \code{MM2C} \code{MM2G} \code{MMDW} \code{MMML}
+\code{MT10} \code{NORM} \code{NOTK} \code{ORDI} \code{OTHE} \code{PCM1}
+\code{PCMY} \code{PHYT} \code{PP25} \code{PP51} \code{PP52} \code{PPOL}
+\code{PRAB} \code{PROB} \code{PTC0} \code{PTC2} \code{PTC3} \code{PTCT}
+\code{SQC0} \code{SQCU} \code{SQCY} \code{SQG5} \code{TOM1} \code{TOM2}
+\code{TOM3} \code{TOM4} \code{TOM5} \code{TOM6} \code{TOM7} \code{TOM9}
+\code{TOMX} \code{V125} \code{X010} \code{X01K} \code{X05C} \code{X100}
+\code{X105} \code{X106} \code{X120} \code{X125} \code{X150} \code{X160}
+\code{X180} \code{X18C} \code{X20P} \code{X250} \code{X25P} \code{X37P}
+\code{X459} \code{X512} \code{X520} \code{X550} \code{X55P} \code{XA1K}
+\code{XARE} \code{XARP} \code{XARS} \code{XC25} \code{XCM3} \code{XCOP}
+\code{XFML} \code{XFRG} \code{XFRP} \code{XFRS} \code{XIMG} \code{XPEA}
+\code{XPEE} \code{XPIX} \code{XRIF}} 
+\item{METHOD}{a factor with
+levels \code{ACID} \code{CPRO} \code{GRAV} \code{HNPK} \code{HVLQ}
+\code{IMAG} \code{NOTK} \code{NULL} \code{OPPF} \code{OTHE} \code{POLS}
+\code{SIEV}} 
+\item{TYPE}{a factor with levels \code{C0P0}
+\code{CONC} \code{INFL} \code{NOTK} \code{OTHE} \code{SOIL}}
+\item{ID_SITE_OLD}{a numeric vector}}}
 \description{
 Charcoal series from the Global Charcoal Database
 }
 \examples{
 
+
 data(paleofiredata)
 ## maybe str(paleofiredata) ; plot(paleofiredata) ...
 
+
 }
 \keyword{datasets}
-

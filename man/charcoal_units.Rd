@@ -7,4 +7,3 @@
 \description{
 Charcoal units used in GCD
 }
-

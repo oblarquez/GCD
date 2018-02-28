@@ -2,8 +2,8 @@
 % Please edit documentation in R/GCD-package.R
 \docType{package}
 \name{GCD-package}
-\alias{GCD}
 \alias{GCD-package}
+\alias{GCD}
 \title{GCD: Global Charcoal Database data}
 \description{
 The GCD package provides Global Charcoal Database data updated at regular
@@ -16,7 +16,9 @@ intervals to be used in cunjuction with the paleofire package.
 \section{Author(s)}{
  Global Paleofire Working Group <paleofire gmail.com>
 }
+
 \examples{
+
 
 rm(list=ls())
 
@@ -33,6 +35,7 @@ head(paleofiredata)
 data(paleofiresites)
 head(paleofiresites)
 
+
 }
 \references{
 Power, M., J. Marlon, P. Bartlein, and S. Harrison. 2010. Fire
@@ -48,4 +51,3 @@ and data exploration. Palaeogeography, Palaeoclimatology, Palaeoecology
 \keyword{global,}
 \keyword{paleo}
 \keyword{sediments,}
-
