@@ -137,8 +137,7 @@ NULL
 #' \code{IMAG} \code{NOTK} \code{NULL} \code{OPPF} \code{OTHE} \code{POLS}
 #' \code{SIEV}} 
 #' \item{TYPE}{a factor with levels \code{C0P0}
-#' \code{CONC} \code{INFL} \code{NOTK} \code{OTHE} \code{SOIL}}
-#' \item{ID_SITE_OLD}{a numeric vector}}
+#' \code{CONC} \code{INFL} \code{NOTK} \code{OTHE} \code{SOIL}}}
 #' @keywords datasets
 #' @examples
 #' 
