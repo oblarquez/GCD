@@ -1,3 +1,15 @@
+GCD 4.0.0 (01/03/18)
+-----------------------------------------
+
+* GCD database now mirrors the online SQL database http://paleofire.org
+
+* Future updates will be monthly or whenerver database updates 
+
+* Paleofiresites table has been reduced and adapted to SQL data (see pfSiteSel changes in paleofire package)
+
+* charcoal_units table added
+
+
 
 GCD 3.0.5 (22/04/15)
 -----------------------------------------

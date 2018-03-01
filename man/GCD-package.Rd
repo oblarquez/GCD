@@ -11,14 +11,13 @@ intervals to be used in cunjuction with the paleofire package.
 }
 \details{
 \tabular{ll}{ Package: \tab GCD\cr Type: \tab Package\cr Version: \tab
-3.0.1\cr Date: \tab 2014-04-30\cr License: \tab GPL (>=2)\cr }
+4.0.0\cr Date: \tab 2018-03-01\cr License: \tab GPL (>=2)\cr }
 }
 \section{Author(s)}{
  Global Paleofire Working Group <paleofire gmail.com>
 }
 
 \examples{
-
 
 rm(list=ls())
 
@@ -34,7 +33,6 @@ head(paleofiredata)
 
 data(paleofiresites)
 head(paleofiresites)
-
 
 }
 \references{
