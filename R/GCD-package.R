@@ -29,9 +29,6 @@
 NULL
 
 
-
-
-
 #' Charcoal units
 #' 
 #' Charcoal units used in GCD
@@ -81,8 +78,6 @@ NULL
 NULL
 
 
-
-
 #' GCD: Global Charcoal Database data
 #' 
 #' The GCD package provides Global Charcoal Database data updated at regular
@@ -121,9 +116,6 @@ NULL
 NULL
 
 
-
-
-
 #' Internal GCD Data
 #' 
 #' Internal GCD Data
@@ -132,9 +124,6 @@ NULL
 #' @aliases Internal PNV_L12 PNV_RF99  pub_key
 #' @name GCD-internal
 NULL
-
-
-
 
 
 #' GCD Charcoal data
@@ -160,9 +149,6 @@ NULL
 #' ## maybe str(paleofiredata) ; plot(paleofiredata) ...
 #' 
 NULL
-
-
-
 
 
 #' GCD sites information
