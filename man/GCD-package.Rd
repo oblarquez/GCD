@@ -2,8 +2,8 @@
 % Please edit documentation in R/GCD-package.R
 \docType{package}
 \name{GCD-package}
-\alias{GCD}
 \alias{GCD-package}
+\alias{GCD}
 \title{GCD: Global Charcoal Database data}
 \description{
 The GCD package provides Global Charcoal Database data updated at regular
@@ -11,11 +11,12 @@ intervals to be used in cunjuction with the paleofire package.
 }
 \details{
 \tabular{ll}{ Package: \tab GCD\cr Type: \tab Package\cr Version: \tab
-3.0.1\cr Date: \tab 2014-04-30\cr License: \tab GPL (>=2)\cr }
+4.0.0\cr Date: \tab 2018-03-01\cr License: \tab GPL (>=2)\cr }
 }
 \section{Author(s)}{
  Global Paleofire Working Group <paleofire gmail.com>
 }
+
 \examples{
 
 rm(list=ls())
@@ -48,4 +49,3 @@ and data exploration. Palaeogeography, Palaeoclimatology, Palaeoecology
 \keyword{global,}
 \keyword{paleo}
 \keyword{sediments,}
-
