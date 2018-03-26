@@ -1,3 +1,11 @@
+GCD 4.0.1 (26/03/18)
+-----------------------------------------
+
+* 7 sites have been added and associated 3500 char values 
+
+* Depths have been corrected to be exact at the third decimal for several sites
+
+
 GCD 4.0.0 (01/03/18)
 -----------------------------------------
 
@@ -8,7 +16,6 @@ GCD 4.0.0 (01/03/18)
 * Paleofiresites table has been reduced and adapted to SQL data (see pfSiteSel changes in paleofire package)
 
 * charcoal_units table added
-
 
 
 GCD 3.0.5 (22/04/15)
