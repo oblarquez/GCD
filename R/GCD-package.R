@@ -121,7 +121,7 @@ NULL
 #' Internal GCD Data
 #' 
 #' 
-#' @aliases Internal PNV_L12 PNV_RF99  pub_key
+#' @aliases Internal PNV_L12 PNV_RF99  pub_key release
 #' @name GCD-internal
 NULL
 
