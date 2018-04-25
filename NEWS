@@ -1,3 +1,15 @@
+GCD 4.0.2 (24/04/18)
+-----------------------------------------
+
+* Three new fields in paleofiresites table to enable backward compatibility and listing GCD version numbers "GCD_version"
+"num_version" and data publication date "update_date", see ?paleofiresites for details.
+
+* num_dating variable issues corrected 
+
+* minor bug fixes
+
+
+
 GCD 4.0.1 (26/03/18)
 -----------------------------------------
 

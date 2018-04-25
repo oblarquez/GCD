@@ -42,7 +42,7 @@ and data exploration. Palaeogeography, Palaeoclimatology, Palaeoecology
 291:52-59.
 }
 \seealso{
-\url{http://gpwg.org}
+\url{http://paleofire.org}
 }
 \keyword{charcoal,}
 \keyword{fire,}

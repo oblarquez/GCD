@@ -6,6 +6,7 @@
 \alias{PNV_L12}
 \alias{PNV_RF99}
 \alias{pub_key}
+\alias{release}
 \title{Internal GCD Data}
 \description{
 Internal GCD Data

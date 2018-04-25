@@ -25,6 +25,9 @@
   \item{\code{qtype}}{a factor with levels \code{CONC} \code{OTHE} \code{INFL} \code{C0P0} \code{NOTK} \code{SOIL}}
   \item{\code{l12}}{a numeric vector}
   \item{\code{rf99}}{a numeric vector}
+  \item{\code{gcd_version}}{main GCD releases}
+  \item{\code{num_version}}{a numeric vector: version number 401 meaning 4.0.1}
+  \item{\code{update_date}}{date of data update in the GCD}
 }}
 \description{
 Sites description and features
