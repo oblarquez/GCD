@@ -1,3 +1,11 @@
+GCD 4.0.3 (20/08/18)
+-----------------------------------------
+
+* Prefunit is defined as the unit with more data for sites without influx (otherwise influx unit is always the prefunit) 
+
+* 9 sites added and 1114 charcoal values
+
+
 GCD 4.0.2 (24/04/18)
 -----------------------------------------
 
