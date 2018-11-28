@@ -1,3 +1,12 @@
+GCD 4.0.4 (23/11/18)
+-----------------------------------------
+
+* 0 "QUANTITY" charcoal values are stored as NULL in the SQL database and were dropped in previous GCD package versions !!PLEASE UPDATE!!
+  Only affects older GCD 4.x.x versions
+
+* 3 sites added
+
+
 GCD 4.0.3 (20/08/18)
 -----------------------------------------
 
