@@ -1,3 +1,33 @@
+GCD 4.0.5 (08/10/19)
+-----------------------------------------
+
+* Sites removed
+"119"  "Lago Dell'Accesa"    
+"129"  "Rucanancu"           
+"420"  "ODP-1144"            
+"667"  "Cederberg Pakhuisch" 
+"835"  "Azzano Decimo part 1"
+"836"  "Azzano Decimo part 2"
+"837"  "Azzano Decimo part 3"
+"1106" "Besancon TEST"       
+"1155" "testNairobi"     
+ 
+* Sites added:
+"1168" "Lake Sidi Ali"          
+"1169" "Lac Geai SBL"           
+"1174" "La Laguna"              
+"1175" "Laguna Grande"          
+"1176" "Laguna de Valleseco"    
+"1177" "Lac a Jean-Marie Boulay"
+"1178" "Lac Bride"              
+"1180" "Garba Guracha"      
+
+* Added dataset about dating
+date.rda -> dating information (age, depths, etc.)
+date_type.rda -> code on date type (14C, tephra, etc.)
+mat_dated.rda -> material dated
+
+
 GCD 4.0.4 (23/11/18)
 -----------------------------------------
 

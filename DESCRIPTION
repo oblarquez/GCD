@@ -1,8 +1,8 @@
 Package: GCD
 Type: Package
 Title: Global Charcoal Database
-Version: 4.0.4
-Date: 2018-11-23
+Version: 4.0.5
+Date: 2019-10-08
 Author: Global Paleofire Working Group <paleofire@univ-fcomte.fr>
 Maintainer: Olivier Blarquez <blarquez@gmail.com>
 Description: Contains the Global Charcoal database data. Data include charcoal
@@ -17,4 +17,4 @@ Suggests:
     paleofire
 LazyLoad: yes
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
