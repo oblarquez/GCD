@@ -211,6 +211,79 @@ NULL
 #' ## maybe str(paleofiresites) ; plot(paleofiresites) ...
 #' 
 NULL
+#' Date table
+#' 
+#' Table with the dating information contained in GCD
+#' 
+#' %% ~~ If necessary, more details than the __description__ above ~~
+#' 
+#' @name date
+#' @docType data
+#' @format A data frame with 4872 observations on the following 8 variables.
+#' \describe{ \item{list("ID_SITE")}{a numeric vector}
+#' \item{list("DATE_LAB_NUMBER")}{a factor with many levels}
+#' \item{list("DEPTH")}{a numeric vector} \item{list("TICKNESS")}{a numeric
+#' vector} \item{list("AGE")}{a numeric vector} \item{list("ERROR")}{a numeric
+#' vector} \item{list("ID_DATE_TYPE")}{a numeric vector}
+#' \item{list("ID_MAT_DATED")}{a factor with levels} }
+#' @references %% ~~ possibly secondary sources and usages ~~
+#' @source %% ~~ reference to a publication or URL from which the data were
+#' obtained ~~
+#' @keywords datasets
+#' @examples
+#' 
+#' data(date)
+#' ## maybe str(date) ; plot(date) ...
+#' 
+NULL
 
 
 
+
+#' Material Dated
+#' 
+#' 
+#' %% ~~ If necessary, more details than the __description__ above ~~
+#' 
+#' @name mat_dated
+#' @docType data
+#' @format A data frame with 23 observations on the following 4 variables.
+#' \describe{ \item{list("ID_MAT_DATED")}{a numeric vector}
+#' \item{list("MAT_DATED_STANDARD_LEVEL")}{a character vector}
+#' \item{list("MAT_DATED_TYPE")}{a character vector}
+#' \item{list("MAT_DATED_HIGH_LEVEL")}{a character vector} }
+#' @references %% ~~ possibly secondary sources and usages ~~
+#' @source %% ~~ reference to a publication or URL from which the data were
+#' obtained ~~
+#' @keywords datasets
+#' @examples
+#' 
+#' data(mat_dated)
+#' ## maybe str(mat_dated) ; plot(mat_dated) ...
+#' 
+NULL
+
+
+
+#' Type of dates in date.rda
+#' 
+#' 
+#' %% ~~ If necessary, more details than the __description__ above ~~
+#' 
+#' @name date_type
+#' @docType data
+#' @format A data frame with 31 observations on the following 4 variables.
+#' \describe{ \item{list("ID_DATE_TYPE")}{a numeric vector}
+#' \item{list("DATE_TYPE_CODE")}{a character vector}
+#' \item{list("DATE_TYPE_NAME")}{a character vector}
+#' \item{list("DATE_TYPE_NUMBER")}{a numeric vector} }
+#' @references %% ~~ possibly secondary sources and usages ~~
+#' @source %% ~~ reference to a publication or URL from which the data were
+#' obtained ~~
+#' @keywords datasets
+#' @examples
+#' 
+#' data(date_type)
+#' ## maybe str(date_type) ; plot(date_type) ...
+#' 
+NULL
