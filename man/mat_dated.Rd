@@ -5,24 +5,18 @@
 \alias{mat_dated}
 \title{Material Dated}
 \format{A data frame with 23 observations on the following 4 variables.
-\describe{ \item{list("ID_MAT_DATED")}{a numeric vector}
-\item{list("MAT_DATED_STANDARD_LEVEL")}{a character vector}
-\item{list("MAT_DATED_TYPE")}{a character vector}
-\item{list("MAT_DATED_HIGH_LEVEL")}{a character vector} }}
-\source{
-%% ~~ reference to a publication or URL from which the data were
-obtained ~~
-}
+\describe{ \item{ID_MAT_DATED}{a numeric vector}
+\item{MAT_DATED_STANDARD_LEVEL}{a character vector}
+\item{MAT_DATED_TYPE}{a character vector}
+\item{MAT_DATED_HIGH_LEVEL}{a character vector} }
+obtained ~~}
 \description{
-%% ~~ If necessary, more details than the __description__ above ~~
+Material Dated
 }
 \examples{
 
 data(mat_dated)
 ## maybe str(mat_dated) ; plot(mat_dated) ...
 
-}
-\references{
-%% ~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}

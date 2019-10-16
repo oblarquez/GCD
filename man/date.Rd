@@ -5,29 +5,20 @@
 \alias{date}
 \title{Date table}
 \format{A data frame with 4872 observations on the following 8 variables.
-\describe{ \item{list("ID_SITE")}{a numeric vector}
-\item{list("DATE_LAB_NUMBER")}{a factor with many levels}
-\item{list("DEPTH")}{a numeric vector} \item{list("TICKNESS")}{a numeric
-vector} \item{list("AGE")}{a numeric vector} \item{list("ERROR")}{a numeric
-vector} \item{list("ID_DATE_TYPE")}{a numeric vector}
-\item{list("ID_MAT_DATED")}{a factor with levels} }}
-\source{
-%% ~~ reference to a publication or URL from which the data were
-obtained ~~
-}
+\describe{ \item{ID_SITE}{a numeric vector}
+\item{DATE_LAB_NUMBER}{a factor with many levels}
+\item{DEPTH}{a numeric vector} \item{TICKNESS}{a numeric
+vector} \item{AGE}{a numeric vector} \item{ERROR}{a numeric
+vector} \item{ID_DATE_TYPE}{a numeric vector}
+\item{ID_MAT_DATED}{a factor with levels} }
+obtained ~~}
 \description{
 Table with the dating information contained in GCD
-}
-\details{
-%% ~~ If necessary, more details than the __description__ above ~~
 }
 \examples{
 
 data(date)
 ## maybe str(date) ; plot(date) ...
 
-}
-\references{
-%% ~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}

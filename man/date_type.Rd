@@ -5,24 +5,18 @@
 \alias{date_type}
 \title{Type of dates in date.rda}
 \format{A data frame with 31 observations on the following 4 variables.
-\describe{ \item{list("ID_DATE_TYPE")}{a numeric vector}
-\item{list("DATE_TYPE_CODE")}{a character vector}
-\item{list("DATE_TYPE_NAME")}{a character vector}
-\item{list("DATE_TYPE_NUMBER")}{a numeric vector} }}
-\source{
-%% ~~ reference to a publication or URL from which the data were
-obtained ~~
-}
+\describe{ \item{ID_DATE_TYPE}{a numeric vector}
+\item{DATE_TYPE_CODE}{a character vector}
+\item{DATE_TYPE_NAME}{a character vector}
+\item{DATE_TYPE_NUMBER}{a numeric vector} }
+obtained ~~}
 \description{
-%% ~~ If necessary, more details than the __description__ above ~~
+Type of dates in date.rda
 }
 \examples{
 
 data(date_type)
 ## maybe str(date_type) ; plot(date_type) ...
 
-}
-\references{
-%% ~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
