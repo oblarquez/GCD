@@ -44,8 +44,8 @@ and data exploration. Palaeogeography, Palaeoclimatology, Palaeoecology
 \seealso{
 \url{http://paleofire.org}
 }
-\keyword{charcoal,}
-\keyword{fire,}
-\keyword{global,}
-\keyword{paleo}
-\keyword{sediments,}
+\concept{charcoal}
+\concept{fire}
+\concept{global}
+\concept{paleo}
+\concept{sediments}

@@ -95,7 +95,11 @@ NULL
 #' history and the Global Charcoal Database: a new tool for hypothesis testing
 #' and data exploration. Palaeogeography, Palaeoclimatology, Palaeoecology
 #' 291:52-59.
-#' @keywords charcoal, fire, global, paleo sediments,
+#' @concept  fire 
+#' @concept global 
+#' @concept charcoal 
+#' @concept sediments 
+#' @concept paleo
 #' @examples
 #' 
 #' rm(list=ls())
