@@ -1,3 +1,9 @@
+GCD 4.0.6 (14/02/20)
+-----------------------------------------
+
+* Minor update: package raster declared in imports for R compatibility
+
+
 GCD 4.0.5 (08/10/19)
 -----------------------------------------
 
