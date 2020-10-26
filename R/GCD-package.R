@@ -12,7 +12,7 @@
 #' \item{METHOD}{a factor with levels \code{Acidification of sample
 #' using gas chromatography to measure elemental carbon (Verardo etal 1990)}
 #' \code{charcoal part Ided as opaque phytoclasts/pyrofusinite in palynofacies
-#' anlaysis} \code{Charcoal part. Idetified in thin slides (soil
+#' anlaysis} \code{Charcoal part. Identified in thin slides (soil
 #' micromorphology)} \code{Charcoal particles identified by imaging software}
 #' \code{Charcoal separated by heavy liquid preparation} \code{Cumulative
 #' probability (95\% confidence interval) alluvial soil charcoal}
@@ -196,6 +196,11 @@ NULL
 #'   \item{\code{has_depth}}{factor indicating presence of depths associated to ages}
 #'   \item{\code{date_int}}{a numeric vector}
 #'   \item{\code{qtype}}{a factor with levels \code{CONC} \code{OTHE} \code{INFL} \code{C0P0} \code{NOTK} \code{SOIL}}
+#'   \item{\code{water_depth}}{a character vector}
+#'   \item{\code{depo_context}}{a character vector}
+#'   \item{\code{id_site_type}}{a character vector}
+#'   \item{\code{id_basin_size}}{a character vector}
+#'   \item{\code{id_lands_desc}}{a character vector}
 #'   \item{\code{l12}}{a numeric vector}
 #'   \item{\code{rf99}}{a numeric vector}
 #'   \item{\code{gcd_version}}{main GCD releases}
