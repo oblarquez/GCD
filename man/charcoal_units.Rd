@@ -4,7 +4,8 @@
 \name{charcoal_units}
 \alias{charcoal_units}
 \title{Charcoal units}
-\format{A data frame with 169 observations on the following 4 variables.
+\format{
+A data frame with 169 observations on the following 4 variables.
 \describe{ \item{unit}{a factor with levels \code{\%125} \code{\%DWT}
 \code{\%TOF} \code{\%WTO} \code{100P} \code{1012} \code{1220} \code{1422}
 \code{1424} \code{3869} \code{5015} \code{5075} \code{6914} \code{7510}
@@ -36,7 +37,8 @@
 \code{XPEA} \code{XPEE} \code{XPIX} \code{XRIF}} \item{qtype}{a
 factor with levels \code{C0P0} \code{CONC} \code{INFL} \code{NOTK}
 \code{OTHE} \code{SOIL}} \item{type}{a character vector}
-\item{code}{a numeric vector} }}
+\item{code}{a numeric vector} }
+}
 \description{
 Charcoal units used in GCD
 }

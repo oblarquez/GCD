@@ -4,7 +4,8 @@
 \name{paleofiredata}
 \alias{paleofiredata}
 \title{GCD Charcoal data}
-\format{A data frame with 134269 observations on the following 4 variables.
+\format{
+A data frame with 134269 observations on the following 4 variables.
 \describe{ \item{ID_SITE}{a numeric vector} \item{DEPTH}{a
 numeric vector} \item{EST_AGE}{a numeric vector}
 \item{QUANTITY}{a numeric vector} \item{METHOD}{a factor
@@ -12,7 +13,8 @@ with levels \code{ACID} \code{CPRO} \code{GRAV} \code{HNPK} \code{HVLQ}
 \code{IMAG} \code{NOTK} \code{OREC} \code{OTHE} \code{POLS} \code{SIEV} }
 \item{UNIT}{a factor see \code{\link{paleofiresites}} for details}
 \item{TYPE}{a factor with levels \code{C0P0} \code{CONC} \code{INFL}
-\code{NOTK} \code{OTHE} \code{SOIL}} }}
+\code{NOTK} \code{OTHE} \code{SOIL}} }
+}
 \description{
 Charcoal series from the Global Charcoal Database
 }

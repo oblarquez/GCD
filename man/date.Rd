@@ -4,14 +4,16 @@
 \name{date}
 \alias{date}
 \title{Date table}
-\format{A data frame with 4872 observations on the following 8 variables.
+\format{
+A data frame with 4872 observations on the following 8 variables.
 \describe{ \item{ID_SITE}{a numeric vector}
 \item{DATE_LAB_NUMBER}{a factor with many levels}
 \item{DEPTH}{a numeric vector} \item{TICKNESS}{a numeric
 vector} \item{AGE}{a numeric vector} \item{ERROR}{a numeric
 vector} \item{ID_DATE_TYPE}{a numeric vector}
 \item{ID_MAT_DATED}{a factor with levels} }
-obtained ~~}
+obtained ~~
+}
 \description{
 Table with the dating information contained in GCD
 }

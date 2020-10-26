@@ -1,7 +1,13 @@
 GCD 4.0.7 (26/10/20)
 -----------------------------------------
+* Major updates:
 
-* Sites added 
+Added "basin_size", "depo_context", "site_type" and "lands_desc" tables and associated information in "paleofiresites" table.
+For a description of the variables added see help("paleofiresites") and data("paleofiresites"). For details
+on a specific variable, for example "basin_size", see help("basin_size") and data("basin_size"). 
+
+* Sites added:
+
 1182	Djamila
 1183	Ait Ichou
 1184	Burullus Lagoon

@@ -4,21 +4,23 @@
 \name{charcoal_methods}
 \alias{charcoal_methods}
 \title{Extraction methods}
-\format{A data frame with 13 observations on the following 3 variables.
+\format{
+A data frame with 13 observations on the following 3 variables.
 \describe{\item{ID_METHOD}{a factor with levels \code{ACID}
 \code{CPRO} \code{GRAV} \code{HNPK} \code{HVLQ} \code{IMAG} \code{NOTK}
 \code{OPPF} \code{OTHE} \code{POLS} \code{SIEV} \code{SIPO} \code{THSL}}
 \item{METHOD}{a factor with levels \code{Acidification of sample
 using gas chromatography to measure elemental carbon (Verardo etal 1990)}
 \code{charcoal part Ided as opaque phytoclasts/pyrofusinite in palynofacies
-anlaysis} \code{Charcoal part. Idetified in thin slides (soil
+anlaysis} \code{Charcoal part. Identified in thin slides (soil
 micromorphology)} \code{Charcoal particles identified by imaging software}
 \code{Charcoal separated by heavy liquid preparation} \code{Cumulative
 probability (95\% confidence interval) alluvial soil charcoal}
 \code{GRAVIMETRIC chemical assay (Winkler method)} \code{Hand picked
 charcoal from soil samples} \code{Not known} \code{Other} \code{Pollen
 slide} \code{Sieved} \code{Sieved + Pollslide}} \item{METH_CODE}{a
-numeric vector}}}
+numeric vector}}
+}
 \description{
 Charcoal extractions methods present in the database
 }

@@ -4,12 +4,14 @@
 \name{date_type}
 \alias{date_type}
 \title{Type of dates in date.rda}
-\format{A data frame with 31 observations on the following 4 variables.
+\format{
+A data frame with 31 observations on the following 4 variables.
 \describe{ \item{ID_DATE_TYPE}{a numeric vector}
 \item{DATE_TYPE_CODE}{a character vector}
 \item{DATE_TYPE_NAME}{a character vector}
 \item{DATE_TYPE_NUMBER}{a numeric vector} }
-obtained ~~}
+obtained ~~
+}
 \description{
 Type of dates in date.rda
 }
